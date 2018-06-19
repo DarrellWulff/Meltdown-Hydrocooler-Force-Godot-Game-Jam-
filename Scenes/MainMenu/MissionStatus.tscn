@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Scenes/MainMenu/MissionStatus.gd" type="Script" id=1]
 [ext_resource path="res://UI/three.png" type="Texture" id=2]
@@ -11,6 +11,7 @@
 [ext_resource path="res://UI/Exit.png" type="Texture" id=9]
 [ext_resource path="res://UI/Mission Lost.png" type="Texture" id=10]
 [ext_resource path="res://UI/TryAgain.png" type="Texture" id=11]
+[ext_resource path="res://Scenes/MainMenu/Total Meltdown.wav" type="AudioStream" id=12]
 
 [node name="MissionStatus" type="Control" index="0" groups=[
 "MStatus",
@@ -28,7 +29,6 @@ size_flags_horizontal = 1
 size_flags_vertical = 1
 script = ExtResource( 1 )
 next_scene = null
-this_scene = null
 menu_scene = null
 
 [node name="CenterContainer" type="CenterContainer" parent="." index="0"]
@@ -383,6 +383,15 @@ group = null
 texture_normal = ExtResource( 9 )
 expand = true
 _sections_unfolded = [ "Rect", "Textures" ]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="3"]
+
+stream = ExtResource( 12 )
+volume_db = -1.2
+pitch_scale = 1.0
+autoplay = false
+mix_target = 0
+bus = "Master"
 
 [connection signal="pressed" from="MissionComplete/CenterContainer/TextureRect/HBoxContainer/Next" to="." method="_on_Next_pressed"]
 

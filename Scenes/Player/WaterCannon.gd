@@ -1,6 +1,7 @@
 extends Spatial
 
 var exhaust = preload("res://Scenes/Player/Water.tscn")
+onready var firePoint = $Fire
 
 func _ready():
 	# Called when the node is added to the scene for the first time.
@@ -17,4 +18,5 @@ func _physics_process(delta):
 		sceneRoot.add_child(exhaustClone)
 		
 		
-		exhaustClone.global_transform = self.global_transform
+		exhaustClone.global_transform = firePoint.global_transform
+		

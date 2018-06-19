@@ -20,6 +20,7 @@ onready var text1 = $CenterContainer/text1
 onready var textGo= $CenterContainer/goText
 onready var gateOpen = $CenterContainer/gateText
 
+onready var audio = $AudioStreamPlayer
 
 
 var theMainReactor
@@ -51,6 +52,7 @@ func _ready():
 	text1.hide()
 	textGo.show()
 	thePlayer.movementEnhabled = true
+	audio.play()
 	
 	yield(get_tree().create_timer(0.5), "timeout")
 	textGo.hide()

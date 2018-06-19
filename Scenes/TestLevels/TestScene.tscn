@@ -182,13 +182,12 @@ menu_scene = "res://Scenes/MainMenu/MainMenu.tscn"
 
 [node name="MainReactor" parent="." index="11" instance=ExtResource( 7 )]
 
-editor/display_folded = true
 transform = Transform( 20, 0, 0, 0, 20, 0, 0, 0, 20, 0, 59.7434, 205.008 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="Area" parent="MainReactor" index="1"]
 
-LevelTemperatureGauge = 500.0
+LevelTemperatureGauge = 480.0
 numOfReactors = 4
 
 

@@ -129,10 +129,6 @@ moveSpeed = 10.0
 moveWidth = 1.7
 direction = Vector3( 0, 0, -1 )
 
-[node name="CollisionShape" parent="MovingPlatform/MovingPlatform/Area" index="0"]
-
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
-
 [node name="MovingPlatform3" parent="." index="18" instance=ExtResource( 5 )]
 
 transform = Transform( 10, 0, 0, 0, 1, 0, 0, 0, 10, 263.879, 0, 3.22639 )
@@ -145,10 +141,6 @@ moveSpeed = 10.0
 moveWidth = 1.7
 direction = Vector3( 0, 0, -1 )
 
-[node name="CollisionShape" parent="MovingPlatform3/MovingPlatform/Area" index="0"]
-
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
-
 [node name="MainReactor" parent="MovingPlatform3/MovingPlatform" index="3" instance=ExtResource( 6 )]
 
 transform = Transform( 1, 0, 0, 0, 10, 0, 0, 0, 1, 0.0653572, 10.8573, 0.0183395 )
@@ -156,7 +148,7 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="Area" parent="MovingPlatform3/MovingPlatform/MainReactor" index="1"]
 
-LevelTemperatureGauge = 700.0
+LevelTemperatureGauge = 650.0
 numOfReactors = 3
 
 [node name="MovingPlatform2" parent="." index="19" instance=ExtResource( 5 )]
@@ -175,10 +167,6 @@ direction = Vector3( 0, 0, -1 )
 
 transform = Transform( 0.666667, 0, 0, 0, 10, 0, 0, 0, 0.666667, 0.103131, 10.8584, 0.0633869 )
 
-[node name="CollisionShape" parent="MovingPlatform2/MovingPlatform/Area" index="0"]
-
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
-
 [node name="Player" parent="." index="20" instance=ExtResource( 7 )]
 
 transform = Transform( -1, 0, -8.74228e-008, 0, 1, 0, 8.74228e-008, 0, -1, 0, 2.0423, 0 )
@@ -193,3 +181,4 @@ transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 16.7852, -56.3907 )
 [editable path="MovingPlatform3"]
 [editable path="MovingPlatform3/MovingPlatform/MainReactor"]
 [editable path="MovingPlatform2"]
+[editable path="Player"]

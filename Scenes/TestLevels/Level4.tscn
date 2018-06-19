@@ -123,13 +123,12 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="MainReactor" parent="." index="18" instance=ExtResource( 3 )]
 
-editor/display_folded = true
 transform = Transform( 9, 0, 0, 0, 9, 0, 0, 0, 9, 74.6601, 29.0188, -310.994 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="Area" parent="MainReactor" index="1"]
 
-LevelTemperatureGauge = 450.0
+LevelTemperatureGauge = 445.0
 numOfReactors = 2
 
 [node name="Reactor" parent="." index="19" instance=ExtResource( 4 )]
