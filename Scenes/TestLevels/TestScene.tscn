@@ -133,8 +133,6 @@ transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 10, 135.266, 20.8532, -73.3102 
 
 [node name="GreyBlocks" type="Node" parent="." index="8"]
 
-editor/display_folded = true
-
 [node name="GreyBlock" parent="GreyBlocks" index="0" instance=ExtResource( 4 )]
 
 transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 58.4263 )
@@ -162,7 +160,7 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="GreyBlock6" parent="GreyBlocks" index="5" instance=ExtResource( 4 )]
 
-transform = Transform( 150, 0, 0, 0, 10, 0, 0, 0, 50, 0, 2.2572, -112.211 )
+transform = Transform( 150, 0, 0, 0, 10, 0, 0, 0, 50, 0, 1.62374, -114.793 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="GreyBlock7" parent="GreyBlocks" index="6" instance=ExtResource( 4 )]

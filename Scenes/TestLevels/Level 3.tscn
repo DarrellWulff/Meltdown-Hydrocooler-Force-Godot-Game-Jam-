@@ -82,7 +82,6 @@ numOfReactors = 2
 
 [node name="MovingPlatform" parent="." index="9" instance=ExtResource( 5 )]
 
-editor/display_folded = true
 transform = Transform( 17, 0, 0, 0, 1, 0, 0, 0, 10, 0, 0, -67.3108 )
 _sections_unfolded = [ "Transform" ]
 

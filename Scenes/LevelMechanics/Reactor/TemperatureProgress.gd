@@ -11,10 +11,11 @@ func _ready():
 	value = 0
 	max_value = mainReactor.LevelTemperatureGauge
 	
-
-func _process(delta):
+func _physics_process(delta):
 	
 	value = mainReactor.incomingHeat
 	if(mainReactor.levelEnded && levelIsEnded == false):
 		levelIsEnded = true
 		hide()
+
+

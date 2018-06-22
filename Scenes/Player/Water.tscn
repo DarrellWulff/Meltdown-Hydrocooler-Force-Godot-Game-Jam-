@@ -3,7 +3,7 @@
 [ext_resource path="res://Scenes/Player/Water.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Player/Materials/Water.tres" type="Material" id=2]
 
-[sub_resource type="SphereMesh" id=4]
+[sub_resource type="SphereMesh" id=1]
 
 custom_aabb = AABB( 0, 0, 0, 0, 0, 0 )
 radius = 1.0
@@ -12,11 +12,13 @@ radial_segments = 64
 rings = 32
 is_hemisphere = false
 
-[sub_resource type="SphereShape" id=3]
+[sub_resource type="SphereShape" id=2]
 
 radius = 1.0
 
-[node name="Water" type="Area" index="0"]
+[node name="Water" type="Area" index="0" groups=[
+"WaterBullet",
+]]
 
 transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0 )
 input_ray_pickable = false
@@ -55,14 +57,14 @@ lod_min_distance = 0.0
 lod_min_hysteresis = 0.0
 lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
-mesh = SubResource( 4 )
+mesh = SubResource( 1 )
 skeleton = NodePath("..")
 material/0 = ExtResource( 2 )
 _sections_unfolded = [ "material" ]
 
 [node name="CollisionShape" type="CollisionShape" parent="." index="1"]
 
-shape = SubResource( 3 )
+shape = SubResource( 2 )
 disabled = false
 
 

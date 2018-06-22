@@ -38,9 +38,9 @@ func _ready():
 		item.connect("object_is_cooled", self, "_on_level_cooled")
 	
 	reactorWallArray = get_tree().get_nodes_in_group("Wall")
+
 	
-	
-func _process(delta):
+func _physics_process(delta):
  	
 	reactorHeatFactor = numOfReactors - currentReactors
 	
@@ -50,10 +50,10 @@ func _process(delta):
 		_reactor_wall_open()
 	
 		
-	if(isCooling && objectCooled == false && mainReactorReady):
-		incomingHeat -= 1
-		heatUpTimer = 0
-	elif(!isCooling && objectCooled == false && incomingHeat>=0 && reactorHeatFactor != 0 && levelStarted):
+	#if(isCooling && objectCooled == false && mainReactorReady):
+		#incomingHeat -= 1
+		#heatUpTimer = 0
+	if(!isCooling && objectCooled == false && incomingHeat>=0 && reactorHeatFactor != 0 && levelStarted):
 		incomingHeat += ((delta / reactorHeatFactor) + .025) 
 	elif(isCooling && objectCooled == false && !incomingHeat<=0 && reactorHeatFactor != 0 && levelStarted):
 		incomingHeat += (delta + .062) 
@@ -95,7 +95,11 @@ func _reactor_wall_open():
 
 func _on_Area_area_entered(area):
 	isCooling = true
-		
+	if(mainReactorReady):
+		incomingHeat -= 1
+		heatUpTimer = 0
+	
+	
 	area.queue_free()
 
 

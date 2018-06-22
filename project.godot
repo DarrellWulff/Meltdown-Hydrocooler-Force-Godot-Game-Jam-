@@ -20,8 +20,6 @@ config/icon="res://UI/MainTitle.png"
 [display]
 
 window/size/height=800
-window/size/resizable=false
-window/size/fullscreen=true
 window/dpi/allow_hidpi=true
 
 [input]
@@ -46,4 +44,7 @@ INPUT_FIRE=[ Object(InputEventMouseButton,"resource_local_to_scene":false,"resou
 
 [rendering]
 
+quality/directional_shadow/size=2048
+quality/shadow_atlas/size=2048
+quality/voxel_cone_tracing/high_quality=false
 environment/default_environment="res://default_env.tres"
