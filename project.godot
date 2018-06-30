@@ -15,11 +15,12 @@ run/main_scene="res://Scenes/MainMenu/MainMenu.tscn"
 boot_splash/image="res://DWLogo.png"
 boot_splash/fullsize=false
 boot_splash/bg_color=Color( 1, 1, 1, 1 )
-config/icon="res://UI/MainTitle.png"
+config/icon="res://MainTitleIcon.png"
 
 [display]
 
 window/size/height=800
+window/size/fullscreen=true
 window/dpi/allow_hidpi=true
 
 [input]
